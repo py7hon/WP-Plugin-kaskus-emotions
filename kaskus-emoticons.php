@@ -1,26 +1,12 @@
 <?php
 /*
-Plugin Name: Kaskus Emoticons
-Plugin URI: http://nartzco.com
-Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 3.1.3
+Plugin Name: Fanshare/Fansubs Emoticons
+Plugin URI: https://github.com/py7hon/WP-Plugin-kaskus-emotions
+Description: Fanshare/Fansubs Emoticons is an emoticon Base Of Kaskus Emoticons
+Version: 1.0.0
 Author: nartzco
+Edited: Muhammad Iqbal Rifai(PY7HON)
 Author URI: http://nartzco.com
-
-Copyright 2009-2012, nartzco.com
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 register_activation_hook( __FILE__, array('KaskusEmoticons', 'activate'));
@@ -91,7 +77,7 @@ if(!class_exists('KaskusEmoticons')){
 			}
 			
 			$backlink= htmlspecialchars($options['backlink'], ENT_QUOTES);
-			$check = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/checkbox';
+			$check = get_option('siteurl') . '/wp-content/plugins/WP-Plugin-kaskus-emotions/checkbox';
 			$check0= $check."0.gif";
 			$check1= $check."1.gif";
 ?>
@@ -131,7 +117,7 @@ if(!class_exists('KaskusEmoticons')){
 			<form method="post" action="options-general.php?page=KaskusEmoticons">
 			<table>
 			<tr>
-			<td><?php _e('FOR BACKLINK nartzco.com ! You can disable this, but if you enable it, Thanks!'); ?></td>
+			<td><?php _e('Terima Kasih Telah Menggunakan Plugins Ini!'); ?></td>
 			<td>
 				<select name="kaskus_emoticons_backlink">
 					<option value="1"<?php echo($backlink=="1"?" selected":"")?>>Enable</option>
@@ -220,11 +206,11 @@ if(!class_exists('KaskusEmoticons')){
 		}
 		
 		function add_button(){
-			$pl_dir 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/';
+			$pl_dir 	= get_option('siteurl') . '/wp-content/plugins/WP-Plugin-kaskus-emotions/';
 	        $wizard_url = $pl_dir . 'kaskus-emoticons-wizard.php';
 	        $button_src = $pl_dir.'kaskus.jpg';
 	        $button_tip = 'Insert a Kaskus Emoticon';
-	        $pl_dir		= ABSPATH . 'wp-content/plugins/kaskus-emoticons/';
+	        $pl_dir		= ABSPATH . 'wp-content/plugins/WP-Plugin-kaskus-emotions/';
 	        echo '<a title="Add a Kaskus Emoticon" href="'.$wizard_url.'?pl_dir='.$pl_dir.'&KeepThis=true&TB_iframe=true" class="thickbox" ><img src="' . $button_src . '" alt="' . $button_tip . '" /></a>';
 		}
 		
@@ -234,7 +220,7 @@ if(!class_exists('KaskusEmoticons')){
 			echo "";
 			if(isset($opt['backlink']) && $opt['backlink']) echo "";
 			else {
-				if(!isset($opt['backlink']))  echo "&nbsp;<a target=\"_blank\" href=\"http://nartzco.com\">nartzco</a>";
+				if(!isset($opt['backlink']))  echo "&nbsp;<a target=\"_blank\" href=\"http://iqbalrifai.net\">Author</a>";
 			}
 			echo "</div>";
 			echo "<div id='kaskusemoticonscontent' style=\"display:none\">";

@@ -1,5 +1,5 @@
 <?php
-$KEEUrl = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
+$KEEUrl = get_option('siteurl') . '/wp-content/plugins/WP-Plugin-kaskus-emotions/emoticons/';
 $opt 	= get_option('kaskus_emoticons');
 
 $KEReplace	= array(

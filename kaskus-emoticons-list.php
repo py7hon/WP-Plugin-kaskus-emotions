@@ -5,7 +5,7 @@ $opt 	= get_option('kaskus_emoticons');
 $KEReplace	= array(
 	':)' => '<img src="'. $KEEUrl.'smile.gif.webp" style="border:none;background:none;" alt=":)" />',
 	':D' => '<img src="'. $KEEUrl.'biggrin.gif.webp" style="border:none;background:none;" alt=":D" />', 
-	':v' => '<img src="'. $KEEUrl.'exlaim.gif.webp" style="border:none;background:none;" alt=":v" />',
+	':v' => '<img src="'. $KEEUrl.'exclaim.gif.webp" style="border:none;background:none;" alt=":v" />',
 	'B-)' => '<img src="'. $KEEUrl.'cool.gif.webp" style="border:none;background:none;" alt="B-)" />',
 	'^_^' => '<img src="'. $KEEUrl.'grin.gif.webp" style="border:none;background:none;" alt="^_^" />',   
 	'>_<' => '<img src="'. $KEEUrl.'twisted.gif.webp" style="border:none;background:none;" alt=">_<" />',    
